@@ -2,9 +2,9 @@ import React from "react";
 
 const Feed = () => {
   return (
-    <div className="header">
+    <div className="feed">
       <div className="feed__header">
-        <h2> home</h2>
+        <h2> Home</h2>
       </div>
     </div>
   );
