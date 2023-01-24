@@ -1,0 +1,68 @@
+.widgets {
+  flex: 0.3;
+  overflow: auto;
+}
+
+.widgets::-webkit-scrollbar {
+  display: none;
+}
+.widgets__input {
+  display: flex;
+  align-self: center;
+  background-color: var(--twitter-background);
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.widgets__input > input {
+  outline: none;
+  border: none;
+  background-color: var(--twitter-background);
+}
+.widgets__input.focus {
+  border: 1px solid var(--twitter-color) !important;
+}
+
+.widgets__input > .MuiSvgIcon-root:focus {
+  color: var(--twitter-color);
+}
+
+.widgets__widgetsContainer {
+  margin-top: 15px;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  background-color: var(--twitter-background);
+  border-radius: 20px;
+}
+
+.widgets__widgetsShowMore,
+.widgets__whoToFollowShowMore {
+  font-size: small;
+  margin-top: 20px;
+  color: var(--twitter-color);
+  cursor: pointer;
+}
+.widgets__widgetsShowMore:hover {
+  background-color: var(--twitter-hover);
+}
+
+.widgets__footer {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.widgets__footer span {
+  font-weight: 500;
+  font-size: small;
+  padding-left: 10px;
+  color: gray;
+}
+.widgets__footer > p > .MuiSvgIcon-root {
+  font-size: small;
+  color: gray;
+}

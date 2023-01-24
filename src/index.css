@@ -19,26 +19,27 @@ code {
   display: flex;
   align-items: center;
   cursor: pointer;
+  font: 200;
 }
 
 .sidebarOption > .MuiSvgIcon-root {
-  padding: 20px;
+  padding: 15px;
+  font-size: 30px;
 }
 .sidebarOption > h2 {
-  font-weight: 800;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: large;
   margin-right: 20px;
 }
 
 .sidebarOption:hover {
-  background-color: #e8f5fe;
+  background-color: var(--twitter-hover);
   border-radius: 30px;
-  color: var(--twitter-color);
-  transition: color 90ms ease-out;
+  transition: background-color 200ms ease-in;
 }
 
 .sidebarOption--active {
-  color: var(--twitter-color);
+  color: var(--twitter-black);
 }
 
 .sidebar__tweet {
@@ -50,10 +51,12 @@ code {
   margin-top: 20px !important;
   border-radius: 30px !important;
   height: 50px;
+  width: 230px !important;
 }
+
 .sidebar {
-  border: 1px solid var(--twitter-background);
-  flex: 0.3;
+  border-right: 1px solid var(--twitter-background);
+  flex: 0.2;
   min-width: 250px;
 
   padding-left: 20px;
@@ -68,20 +71,50 @@ code {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-
+.sidebar__profile {
+  padding: 10px;
+  margin-top: 250px;
+  margin-left: 20px;
+  display: flex;
+  height: 36px;
+  width: 225px;
+}
+.sidebar__profile:hover {
+  background-color: #e8f5fe;
+  border-radius: 30px;
+  color: var(--twitter-color);
+  transition: color 90ms ease-out;
+  cursor: pointer;
+}
+.sidebar__profileUsername {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 40px;
+  font-size: 12px;
+}
+.sidebar__horizon {
+  margin-top: 6px;
+  margin-left: 20px;
+}
+.sidebar__profileUsername h3:nth-child(2) {
+  color: gray;
+}
 .feed {
-  flex: 0.4;
+  flex: 0.5;
   border-right: 1px solid var(--twitter-background);
-  min-width: fit-content;
+
   overflow-y: scroll;
 }
 
 .feed__header {
   position: sticky;
   top: 0;
-  background-color: white;
-  z-index: 100;
-  border: 1px solid var(--twitter-background);
+  backdrop-filter: blur(100px);
+  margin-bottom: -10px;
+
+  z-index: 1;
+  opacity: 0.8;
   padding: 15px 20px;
 }
 
@@ -95,4 +128,27 @@ code {
 
 .widgets {
   flex: 0.3;
+}
+
+.sidebar__hashtag {
+  margin-left: 15px;
+  font-size: 30px;
+  height: 60px;
+}
+.sidebar__explore {
+  padding-bottom: 10000px;
+  display: inline;
+  font-weight: 500;
+  font-size: large;
+  margin-bottom: 10px;
+}
+.sidebar__hashtagIcon {
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.sidebar__hashtag:hover {
+  background-color: var(--twitter-hover);
+  border-radius: 30px;
+  transition: background-color 200ms ease-in;
 }

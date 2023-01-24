@@ -1,0 +1,26 @@
+.trends {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: -20px;
+  margin-right: -20px;
+  cursor: pointer;
+}
+
+.trends__trendsDescription > h4 {
+  font-weight: 300;
+  font-size: small;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.trends__trendsDescription > h3 {
+  font-size: 15px;
+}
+
+.trends:hover {
+  background-color: var(--twitter-hover);
+  transition: background-color 150ms ease-in;
+}

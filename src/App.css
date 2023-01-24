@@ -1,11 +1,14 @@
 body {
   --twitter-color: #50b7f5;
   --twitter-background: #e6ecf0;
+  --twitter-hover: #dfe3e6;
+  --twitter-black: black;
 }
 
 .app {
   display: flex;
-  height: 100vh;
+  height: 100%;
+  width: 100vw;
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;

@@ -1,38 +1,48 @@
 import { Avatar } from "@material-ui/core";
 import React from "react";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
-import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
-import RepeatIcon from "@material-ui/icons/Repeat";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import PublishIcon from "@material-ui/icons/Publish";
-import "./Post.css";
 
+import "./Post.css";
+import BsChat from "@meronex/icons/bs/BsChat";
+import MdcTwitterRetweet from "@meronex/icons/mdc/MdcTwitterRetweet";
+import AiOutlineHeart from "@meronex/icons/ai/AiOutlineHeart";
+import FiShare from "@meronex/icons/fi/FiShare";
 const Post = ({ displayName, username, verified, text, image, avatar }) => {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headertext">
             <h3>
-              Rafeh Qazi{" "}
+              {displayName}
               <span className="post__headerSpecial">
-                <VerifiedUserIcon className="post__badge" /> @Psam
+                {verified && <VerifiedUserIcon className="post__badge" />}@
+                {username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescroiption">
-            <p> I challenge you to build</p>
+            <p> {text}</p>
           </div>
         </div>
-        <img src="" alt="" />
+        <img src={image} alt="" />
         <div className="post__footer">
-          <ChatBubbleIcon fontSize="small" />
-          <RepeatIcon fontSize="small" />
-          <FavoriteBorderIcon fontSize="small" />
-          <PublishIcon fontSize="small" />
+          <div className="post__replyIcon">
+            <BsChat /> <span> 8</span>
+          </div>
+          <div className="post__tweetIcon">
+            <MdcTwitterRetweet /> <span> 8</span>
+          </div>
+          <div className="post__heartIcon">
+            <AiOutlineHeart /> <span> 8</span>
+          </div>
+
+          <div className="post__shareIcon">
+            <FiShare /> <span> 8</span>
+          </div>
         </div>
       </div>
     </div>

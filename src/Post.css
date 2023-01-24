@@ -1,4 +1,5 @@
 .post {
+  margin-top: 20px;
   display: flex;
   align-items: flex-start;
   border-bottom: 1px solid var(--twitter-background);
@@ -12,6 +13,12 @@
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  margin-right: 100px;
+  color: gray;
+}
+.post__footer span {
+  padding-left: 10px;
+  font-size: small;
 }
 .post__badge {
   font-size: 14px !important;
@@ -23,7 +30,7 @@
   color: gray;
 }
 
-.post__headerDescroiption {
+.post__headerDescription {
   margin-bottom: 10px;
   font-size: 15px;
 }
@@ -38,5 +45,17 @@
   padding: 10px;
 }
 .post__avatar {
-  padding: 20px;
+  margin-top: -10px;
+  padding-right: 5px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.post__replyIcon,
+.post__tweetIcon,
+.post__heartIcon,
+.post__shareIcon {
+  cursor: pointer;
+  font-size: 20px;
 }
